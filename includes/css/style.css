@@ -1,3 +1,8 @@
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 /*Logo*/
 #logo{
     padding: 0;
@@ -64,9 +69,47 @@ div.content {
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;
+}*/
+
+/*Sidebar*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-*/
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#mySidenav{
+  padding-top: 5cm;
+}
+
+
 
 
 
@@ -85,6 +128,10 @@ div.content {
   
   /*Main Content*/
   /* Headlines Main Content*/
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
   #padding-top{
     padding-top: 20px;
   }
@@ -214,7 +261,7 @@ div.content {
    
    
  }
- @media (orientation:landscape) and (max-width: 500px) {
+ @media (orientation:landscape) and (max-width: 1000px) {
     #distens_Notes {
        display: none; /* visibility: none; */
     }
@@ -224,6 +271,14 @@ div.content {
    
    
   
+ }
+
+
+ @media (orientation:landscape) and (min-width: 500px) {
+
+  #mainOut{
+    display: none;
+  }
  }
 
 
