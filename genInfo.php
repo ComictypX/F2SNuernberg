@@ -16,11 +16,26 @@
   <body>
 
   <?php
-  $filename = "./data/batteryData.json";
+  $filename = "data/batteryData.json";
   $jso = file_get_contents($filename);
   $jarray = json_decode($jso, true);
 
-  $array_bat = $array["battery"];
+  $array_bat = $jarray["result"]["data"];
+  $array_keys = $jarray["result"]["columns"];
+  $key_charge = array_search("stofch", $array_keys);
+  $key_voltage = array_search("v_value", $array_keys);
+  $key_current = array_search("bat_c", $array_keys);
+
+  $range = end($array_bat)[$key_charge];
+  $inspection = "11.11.2018";
+  $user = "Alex";
+  $friends = 12;
+  $model = "Model123";
+
+  $hp = 30;
+  $bat_capacity = 2.6;
+  $manufacturing_year = 2017;
+
   ?>
 
 
@@ -50,13 +65,20 @@
             </tr>
             <tr>
               <td>Range</td>
-              <td><?php echo $array_bat ?></td>
+              <td>
+              <?php echo $range ?> km
+              </td>
             </tr>
             <tr>
-              <td>Battery charge</td><td>23 %</td>
+              <td>Battery charge</td><td>
+              <?php echo end($array_bat)[$key_charge] ?> %
+              </td>
             </tr>
             <tr>
-              <td>Last inspection</td><td>11.11.2018</td>
+              <td>Last inspection</td>
+              <td>
+              <?php echo $inspection ?>
+              </td>
             </tr>
           <!-- </table>
           <table width="400"> -->
@@ -64,10 +86,16 @@
                 <td><b>User Dates</b></td> <td></td>
             </tr>
             <tr>
-              <td>User Name</td><td>Alex</td>
+              <td>User Name</td>
+              <td>
+              <?php echo $user ?>
+              </td>
             </tr>
             <tr>
-              <td>Friends</td><td>12</td>
+              <td>Friends</td>
+              <td>
+              <?php echo $friends ?>
+              </td>
             </tr>
           <!-- </table>
           <table width="400"> -->
@@ -75,19 +103,40 @@
               <td><b>Scooter Information</b></td> <td></td>
             </tr>
             <tr>
-              <td>Model</td><td>bla bla model name</td>
+              <td>Model</td>              
+               <td>
+              <?php echo $model ?>
+              </td>
             </tr>
             <tr>
-              <td>Horse Powers</td><td>30</td>
+              <td>Horse Powers</td>
+              <td>
+              <?php echo $hp ?> hp
+              </td>
             </tr>
             <tr>
-              <td>Battery capacity</td><td>kWh</td>
+              <td>Battery capacity</td>
+              <td>
+              <?php echo $bat_capacity ?> kWh
+              </td>
             </tr>
             <tr>
-              <td>Battery voltage</td><td>1023 V</td>
+              <td>Battery voltage</td>
+              <td>
+              <?php echo end($array_bat)[$key_voltage] ?> V
+              </td>
               </tr>
               <tr>
-                <td>Manufacturing year</td><td>2017</td>
+              <td>Battery current</td>
+              <td>
+              <?php echo end($array_bat)[$key_current] ?> A
+              </td>
+              </tr>
+              <tr>
+                <td>Manufacturing year</td>
+                <td>
+              <?php echo $manufacturing_year ?>
+              </td>
               </tr>
               </tbody>
           </table>

@@ -1,0 +1,13 @@
+{"result":
+    {"data":
+        [["181812101806072401603","1558613871819790","0",0,0,0,0,0,0,0,0,0,0,"0"],
+        ["181812101806072401603","1558613872116239","0",0,0,0,0,0,0,0,0,0,0,"0"],
+        ["181812101806072401603","1558613872418859","0",0,0,0,0,0,0,0,0,0,0,"0"],
+        ["181812101806072401603","1558613872699021","0",0,0,0,0,0,0,0,0,0,0,"0"],
+        ["181812101806072401603","1558613872999686","0",0,0,0,0,0,0,0,0,0,0,"0"],
+        ["181812101806072401603","1558613873308330","0",0,0,0,0,0,0,0,0,0,0,"0"],
+        ["181812101806072401603","1558613873623246","0",0,0,0,0,0,0,0,0,0,0,"0"]],
+"items-left":191528,
+"columns":["did","ts","e_req","v_value","bat_c","stofch","ccml","cdml","v_maxl","v_minl","max_c_tmp","min_c_tmp","aver_c_tmp","con_st"],
+"next-item":"jt8PGSoTwR6TA+qbwv74FcQkVdVQKj5S4wSwIF7ECNByCiLrjSlYWIaqJVxmOsehB5ih2+b5uJKG/OdEVag0wNCSwbsomeOcVQx6jJbeK/I4PQlt/03GfazejZaubHtwf/wqXs7Jj27IKwSHziyVUDsjs/OiQyoTPo/8sPSamu5pzXpEAXCntBtAWwO9s4rukyZ5ULKAzhXF0WKyQXbXt1Y3NVMoG1rdCFpXmrubeoQl1ZnZhtyweNJaQRQRbm1SKs8mhDA3ScPAWfjH15TlF2SwjVI="},
+"error":null}
