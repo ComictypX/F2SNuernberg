@@ -21,9 +21,8 @@ function initMap(initLat, initLong, range) {
   }
   
   function updateMap( lat, long, range){
-	console.log(mymap);
-	mymap.setView([lat, long], 13);
-	marker.setLatLng([lat, long]).update();
-	circle.setLatLng([lat, long]);
-	circle.setRadius(range);  
+		mymap.setView([lat, long], 13);
+		marker.setLatLng([lat, long]).update();
+		circle.setLatLng([lat, long]);
+		circle.setRadius(range);  
 	}
