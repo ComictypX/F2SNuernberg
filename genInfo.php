@@ -49,10 +49,9 @@
         <li><a  href="Startpage_cont.html">Home</a></li>
         <li><a href="genInfo.php">General Information </a></li>
         <li><a href="ECCCha.html">Eco Monitor</a></li>
-        <li><a href="about.asp">Help</a></li>
-        
-        
-        
+        <li><a href="safety.html">Safety and Security</a></li>
+        <li><a href="navigation.html">Navigation</a></li>
+
         <li class="loginPos"><a id="uhr"></a></li>
         <li class="loginPos"><a  href="login.html">Login</a></li>	
         
