@@ -1,7 +1,12 @@
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 /*Logo*/
 #logo{
     padding: 0;
-    height: 350px;
+    top: -30px;
   }
   
   /*Nav Bar */
@@ -59,16 +64,74 @@
   text-decoration: none;
   }
   
+/*
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}*/
+
+/*Sidebar*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#mySidenav{
+  padding-top: 5cm;
+}
+
+
+
+
+
+  
   /* footer*/
   footer{
     background-color: #333;
+    padding: 40px;
   }
-  #fooder_padding-top{
+  #footer_padding-top{
     margin-top: 150px;
+  }
+  footer a{
+    color: white;
   }
   
   /*Main Content*/
   /* Headlines Main Content*/
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
   #padding-top{
     padding-top: 20px;
   }
@@ -77,18 +140,11 @@
     
   }
    
-  #distens_Login{
+  #distance_Login{
     padding-left: 150px;
     padding-top: 20px;
   }
   
-  .mainText{
-    width: 55%;
-    margin-top: 30px;
-    margin-left: 15px;
-    margin-bottom: 50px;
-    color: Black;
-  }
 
   #row_dist{
     padding-top: 30px;
@@ -136,36 +192,6 @@
   }
   
   
-  /*Spinner*/
-  
-  #spinner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border: 16px solid #07e212;
-    border-radius: 50%;
-    border-top: 16px solid #0f0f0f;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-  
-  }
-  
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  
-  
   
   .animate-bottom {
     position: relative;
@@ -184,60 +210,8 @@
     from{ bottom:-100px; opacity:0 } 
     to{ bottom:0; opacity:1 }
   }
-  
-  #myDiv {
-    display: none;
-    text-align: center;
-  }
-  
-  
-  /*Login Page*/
-  
-  
-  
-  #background{
-    background-image:url("hacking-1685092_960_720.jpg") ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Numans', sans-serif;
-    
-  }
-  
-  .Box{
-    margin-left: 40%;
-    height: 100%;
-    align-content: center;
-  }
-  
-  .Box_two{
-    height: 370px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 400px;
-    background-color: grey;
-  }
-  
-  .Box-header {
-    color: #FFC312;
-  }
-  .Box-body{
-    margin: 10%;
-    
-  
-  }
-  .remember{
-    color: white;
-  }
-  
-  .remember input
-    {
-    width: 20px;
-    height: 20px;
-    margin-left: 15px;
-    margin-right: 5px;
-  }
-  
+
+ 
   .login_btn{
     color: black;
     background-color: #FFC312;
@@ -257,30 +231,76 @@
   .links a{
     margin-left: 4px;
   }
-  #backToHome{
-    margin-top: 80px;
-  }
+  
+
+ 
+ 
+
   
   /* disable extra things*/
-  
+ 
 
   @media (orientation:portrait) {
     #distens_Notes{
        display: none; /* visibility: none; */
     }
-    #distens_Login{
+    #distance_Login{
       display: none; /* visibility: none; */
    }
+   #map100{
+    width: 100%;
+  }
+
+  .NAVBAR{
+    display: none;
+  }
+   
+   
+   
  }
- @media (orientation:landscape) and (max-width: 425px) {
+ @media (orientation:landscape) and (max-width: 1000px) {
     #distens_Notes {
        display: none; /* visibility: none; */
     }
-    #distens_Login{
+    #distance_Login{
       display: none; /* visibility: none; */
    }
-   #location_png{
-    min-height: 375px;
-    min-width: 500px;
-   }
+   
+   
+  
  }
+
+
+ @media (orientation:landscape) and (min-width: 500px) {
+
+  #mainOut{
+    display: none;
+  }
+ }
+
+
+ /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
