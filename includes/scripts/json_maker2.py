@@ -12,7 +12,7 @@ def passer(time, number):
         data["where"]["TS"][">="]=int(time)#1558536000000000
         data["max-items"] = number
         with open('includes/scripts/'+file+".json", "w") as jsonFile:
-            json.dump(data, jsonFile)
+            json.dump(data, jsonFile, sort=True)
 
         cmd = 'sudo curl -X GET -s -k -H "Content-Type: application/json" --key RESTTEST_key.pem --cert RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q=$(cat includes/scripts/{}.json | base64 -w 0)'.format(file)
         print (cmd)
