@@ -272,11 +272,15 @@
       display: none; /* visibility: none; */
    }
  }
- @media (orientation:landscape) and (max-width: 767px) {
+ @media (orientation:landscape) and (max-width: 425px) {
     #distens_Notes {
        display: none; /* visibility: none; */
     }
     #distens_Login{
       display: none; /* visibility: none; */
+   }
+   #location_png{
+    min-height: 375px;
+    min-width: 500px;
    }
  }
