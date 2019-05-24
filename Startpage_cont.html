@@ -18,19 +18,21 @@
 
 
     <title>Team Orange Bull Racing</title>
+    <img  id="logo" class="img-fluid" src="includes/img/2000px-Continental_AG_logo.svg.png" alt="CESpa_E-Scooter">
   </head>
   <body>
-    <head>
-      <img  id="logo" class="img-fluid" src="includes/img/2000px-Continental_AG_logo.svg.png" alt="CESpa_E-Scooter">
-    </head>
-    
-    
+    <div>
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a  href="Startpage_cont.html">Home</a></li>
+          <a href="genInfo.html">General Information </a>
+          <a href="ECCCha.html">ECC Challenge</a>          
+        </div>  
     <div class="NAVBAR">
     <ul id="nav_ul">
         <li><a  href="Startpage_cont.html">Home</a></li>
         <li><a href="genInfo.php">General Information </a></li>
         <li><a href="ECCCha.html">ECO Monitor</a></li>
-        <li><a href="about.asp">Help</a></li>
         
         
         <li class="loginPos"><a id="uhr"></a></li>
@@ -46,12 +48,25 @@
 
 
     <div class="row ">
-      <div class="col-2">
+        
+      <div class="col-2" id="main">
+          <span id="mainOut"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      </div>
+      <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+          }
+          </script>
 
-      </div>
-      <div class="col-2" id="padding-top">
-        <h2>Reichweite:</h2>
-      </div>
+
+
+
     </div>
     
     <div class="row "  >
@@ -68,8 +83,8 @@
               (document,'script','weatherwidget-io-js');
           </script>
       </div>
-      <div class="col-lg-6 col-md12 " >
-      <div id="map-canvas" style="height: 500px; width: 800px; margin: 100px auto;"></div>   
+      <div class="col-lg-10 col-md12 " >
+      <div id="map-canvas" style="height: 500px; width: 100%;"></div>   
       </br>
           <div class="row" id="row_dist" >
 
@@ -77,31 +92,12 @@
 
           </div>
       </div>
-      
-        <form>
-            <div class="col-2" id="distance_Login">
-                <table class="table price-table" >
-                  <tr>
-                    <td>Username:</td>
-                    <td><input type="text"/> </td>
-                  </tr>
-                  <tr>
-                      <td>Password:</td>
-                      <td><input type="password"/> </td>
-                  </tr>
-                  <tr>
-                    <td><input id="Login_btn" class ="btn"type="submit"value="Login"/></td>
-                    <td><input id="Login_btn" class ="btn" type="reset" value="Reset"></td>
-                  </tr>
-                </table>
-                </div>
-            </div>  
-          </form>
     </div>
   </div>
         
-   //Business Logic     
+      
 	<script>
+    //Business Logic  
 
     //Map initialize
     initMap(51.505, -0.09, 800);
@@ -114,19 +110,13 @@
     
     
     </script>
+    </div> 
   </body>
   <footer id="footer_padding-top">
-      <div class="row">
-            
-          <div class="column">
-              <a href="#">Impressung</a></br>
-              <a href="#">Datenschutz</a></br>
-              <a href="#">Kontakt</a></br>
-          </div>
-        </div>
-  
-  
-  
-  
+    <div class="row justify-content-center">                 
+      <a class="col-lg-1 col-xs-1" href="#">Imprint</a></br>
+      <a class="col-lg-1 col-xs-1" href="#">Privacy</a></br>
+      <a class="col-lg-1 col-xs-1" href="#">Contact</a></br>         
+    </div>  
   </footer>
 </html>
