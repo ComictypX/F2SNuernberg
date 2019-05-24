@@ -4,6 +4,7 @@
     <link href="includes/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <script language="javascript" type="text/javascript" src="includes/js/time.js">time</script>
+        <script language="javascript" type="text/javascript" src="includes/js/genInfo.js">time</script>
         
   <head>
     <meta charset="utf-8" />
@@ -13,6 +14,16 @@
     <title>Team Orange Bull Racing</title>
   </head>
   <body>
+
+  <?php
+  $filename = "./data/batteryData.json";
+  $jso = file_get_contents($filename);
+  $jarray = json_decode($jso, true);
+
+  $array_bat = $array["battery"];
+  ?>
+
+
     <head>
         <img  id="logo" class="col-12 " src="includes/img/2000px-Continental_AG_logo.svg.png" alt="CESpa_E-Scooter">
       </head>
@@ -21,7 +32,7 @@
 
     <ul id="nav_ul">
         <li><a  href="Startpage_cont.html">Home</a></li>
-        <li><a href="genInfo.html">General Information </a></li>
+        <li><a href="genInfo.php">General Information </a></li>
         <li><a href="ECCCha.html">Eco Monitor</a></li>
         <li><a href="about.asp">Help</a></li>
         
@@ -38,7 +49,8 @@
               <td><b>General Information</b></td> <td></td>
             </tr>
             <tr>
-              <td>Range</td><td>10 km</td>
+              <td>Range</td>
+              <td><?php echo $array_bat ?></td>
             </tr>
             <tr>
               <td>Battery charge</td><td>23 %</td>

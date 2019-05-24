@@ -13,7 +13,7 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
 
-    console.log("coll localName = , i ", this.id);
+    // console.log("coll localName = , i ", this.id);
     if (this.id == "highscores_collapsible") {
       changeHighscoreTab(event, 'Overall score');
     }
