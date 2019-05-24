@@ -47,9 +47,9 @@
 
     <ul id="nav_ul">
         <li><a  href="index.html">Home</a></li>
-        <li><a href="genInfo.php">General Information </a></li>
+        <li><a href="genInfo.php">My Cespa </a></li>
         <li><a href="ECCCha.html">Eco Monitor</a></li>
-        <li><a href="safety.html">Safety and Security</a></li>
+        <li><a href="safety.html">Safety</a></li>
         <li><a href="navigation.html">Navigation</a></li>
 
         <li class="loginPos"><a id="uhr"></a></li>
@@ -60,7 +60,7 @@
         <table class="distance table">
             <tbody>
             <tr>
-              <td><b>General Information</b></td> <td></td>
+              <td><b>My Cespa</b></td> <td></td>
             </tr>
             <tr>
               <td>Range</td>
