@@ -23,4 +23,3 @@ def passer(time, number):
     with open("passer.json", "r+") as jsonFile4:
             data3 = json.load(jsonFile4)
     print(data3)
-return
