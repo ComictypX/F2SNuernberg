@@ -16,7 +16,7 @@ def passer(time, number):
 
         cmd = 'sudo curl -X GET -s -k -H "Content-Type: application/json" --key RESTTEST_key.pem --cert RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q=$(cat includes/scripts/{}.json | base64 -)'.format(file)
         os.system(cmd+ '> includes/scripts/{}_Data.json'.format(file))
-    for file in datagroup:
+        print (cmd+ '> includes/scripts/{}_Data.json'.format(file))
         with open("includes/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
             data2 = json.load(jsonFile2)
 
