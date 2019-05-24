@@ -261,7 +261,22 @@
     margin-top: 80px;
   }
   
-  /* ECC*/
+  /* disable extra things*/
   
 
-  
+  @media (orientation:portrait) {
+    #distens_Notes{
+       display: none; /* visibility: none; */
+    }
+    #distens_Login{
+      display: none; /* visibility: none; */
+   }
+ }
+ @media (orientation:landscape) and (max-width: 767px) {
+    #distens_Notes {
+       display: none; /* visibility: none; */
+    }
+    #distens_Login{
+      display: none; /* visibility: none; */
+   }
+ }
