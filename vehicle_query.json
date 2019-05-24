@@ -1,1 +1,0 @@
-{"time": 123, "db": "tires", "schema": "hackaton", "table": "vehicle", "where": {"TS": {">=": "time"}}}
