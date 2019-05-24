@@ -15,9 +15,9 @@ def passer(time, number):
             json.dump(data, jsonFile)
 
         cmd = 'sudo curl -X GET -s -k -H "Content-Type: application/json" --key RESTTEST_key.pem --cert RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q=$(cat {}.json | base64 -w 0)'.format(file)
-        os.system(cmd+ '> includes/scripts/{}_Data.txt'.format(file))
+        os.system(cmd+ '> includes/scripts/{}_Data.json'.format(file))
 
-        with open("includes/scripts/{}_Data.txt".format(file), "r+") as jsonFile2:
+        with open("includes/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
             data2 = json.load(jsonFile2)
 
         batch.append(data2)
