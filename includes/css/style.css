@@ -74,9 +74,13 @@ div.content {
   /* footer*/
   footer{
     background-color: #333;
+    padding: 40px;
   }
   #footer_padding-top{
     margin-top: 150px;
+  }
+  footer a{
+    color: white;
   }
   
   /*Main Content*/
