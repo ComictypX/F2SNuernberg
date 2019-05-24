@@ -1,122 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-        <link href="/includes/css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-        crossorigin=""></script>
-        <script type="text/javascript" src="/includes/js/map.js"></script> 
-        <script language="javascript" type="text/javascript" src="/includes/js/time.js">time</script>
-        
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="/includes/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+<script type="text/javascript" src="/includes/js/map.js"></script>
+<script type="text/javascript" src="includes/js/functions.js"></script>
+<script language="javascript" type="text/javascript" src="/includes/js/time.js">
+	time
+</script>
 
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Team Orange Bull Racing</title>
+	<img id="logo" class="img-fluid" src="includes/img/2000px-Continental_AG_logo.svg.png" alt="CESpa_E-Scooter">
+</head>
 
-    <title>Team Orange Bull Racing</title>
-    <img  id="logo" class="img-fluid" src="includes/img/2000px-Continental_AG_logo.svg.png" alt="CESpa_E-Scooter">
-  </head>
-  <body>
-    <div>
-      <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a  href="Startpage_cont.html">Home</a></li>
-          <a href="genInfo.html">General Information </a>
-          <a href="ECCCha.html">ECC Challenge</a>          
-        </div>  
-    <div class="NAVBAR">
-    <ul id="nav_ul">
-        <li><a  href="Startpage_cont.html">Home</a></li>
-        <li><a href="genInfo.php">General Information </a></li>
-        <li><a href="ECCCha.html">ECO Monitor</a></li>
-        
-        
-        <li class="loginPos"><a id="uhr"></a></li>
-        <li class="loginPos"><a  href="login.html">Login</a></li>	
-        
-    </ul>
-  </div>
-
-
-
- 
- 
-
-
-    <div class="row ">
-        
-      <div class="col-2" id="main">
-          <span id="mainOut"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-      </div>
-      <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-          }
-          
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-          }
-          </script>
-
-
-
-
-    </div>
-    
-    <div class="row "  >
-      <div class="col-2" id="distens_Notes">
-          <a class="weatherwidget-io"  href="https://forecast7.com/en/49d4511d08/nuremberg/"
-           data-label_1="NÜRNBERG" data-label_2="WEATHER" data-theme="original" >NÜRNBERG WEATHER</a>
-          
-          <script>
-          !function(d,s,id){
-            var js,fjs=d.getElementsByTagName(s)[0];
-            if(!d.getElementById(id)){js=d.createElement(s);
-              js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
-              fjs.parentNode.insertBefore(js,fjs);}}
-              (document,'script','weatherwidget-io-js');
-          </script>
-      </div>
-      <div class="col-lg-10 col-md12 " >
-      <div id="map-canvas" style="height: 500px; width: 100%;"></div>   
-      </br>
-          <div class="row" id="row_dist" >
-
-              <input  class="btn" id="Login_btn" type="button" value="next charging station">
-
-          </div>
-      </div>
-    </div>
-  </div>
-        
-      
+<body>
+	<div>
+		<div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="Startpage_cont.html">Home</a>
+			</li> <a href="genInfo.html">General Information </a>
+			<a href="ECCCha.html">ECC Challenge</a> 
+		</div>
+		<div class="NAVBAR">
+			<ul id="nav_ul">
+				<li><a href="Startpage_cont.html">Home</a>
+				</li>
+				<li><a href="genInfo.php">General Information </a>
+				</li>
+				<li><a href="ECCCha.html">ECO Monitor</a>
+				</li>
+				<li class="loginPos">
+					<a id="uhr"></a>
+				</li>
+				<li class="loginPos"><a href="login.html">Login</a>
+				</li>
+			</ul>
+		</div>
+		<div class="row ">
+			<div class="col-2" id="main"> <span id="mainOut" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+			</div>
+			<script>
+				function openNav() {
+				            document.getElementById("mySidenav").style.width = "250px";
+				            document.getElementById("main").style.marginLeft = "250px";
+				          }
+				          
+				          function closeNav() {
+				            document.getElementById("mySidenav").style.width = "0";
+				            document.getElementById("main").style.marginLeft= "0";
+				          }
+			</script>
+		</div>
+		<div class="row ">
+			<div class="col-2" id="distens_Notes"> <a class="weatherwidget-io" href="https://forecast7.com/en/49d4511d08/nuremberg/" data-label_1="NÜRNBERG" data-label_2="WEATHER" data-theme="original">NÜRNBERG WEATHER</a>
+				<script>
+					!function(d,s,id){
+					            var js,fjs=d.getElementsByTagName(s)[0];
+					            if(!d.getElementById(id)){js=d.createElement(s);
+					              js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+					              fjs.parentNode.insertBefore(js,fjs);}}
+					              (document,'script','weatherwidget-io-js');
+				</script>
+			</div>
+			<div class="col-lg-10 col-md12 ">
+				<div id="map-canvas" style="height: 500px; width: 100%;"></div>
+				</br>
+				<div class="row" id="row_dist">
+					<input class="btn" id="Login_btn" type="button" value="next charging station">
+				</div>
+			</div>
+		</div>
+	</div>
 	<script>
-    //Business Logic  
+		//Map initialize
+		    initMap(51.505, -0.09, 800);  
+		    //Business Logic
+		      var logicTimer = setInterval(run, 1000);
+	</script>
+	</div>
+</body>
+<footer id="footer_padding-top">
+	<div class="row justify-content-center"> <a class="col-lg-1 col-xs-1" href="#">Imprint</a>
+		</br> <a class="col-lg-1 col-xs-1" href="#">Privacy</a>
+		</br> <a class="col-lg-1 col-xs-1" href="#">Contact</a>
+		</br>
+	</div>
+</footer>
 
-    //Map initialize
-    initMap(51.505, -0.09, 800);
-    
-    //Map update
-    console.log("Updating");
-    updateMap(45.00, 0, 1500);
-    
-    
-    
-    
-    </script>
-    </div> 
-  </body>
-  <footer id="footer_padding-top">
-    <div class="row justify-content-center">                 
-      <a class="col-lg-1 col-xs-1" href="#">Imprint</a></br>
-      <a class="col-lg-1 col-xs-1" href="#">Privacy</a></br>
-      <a class="col-lg-1 col-xs-1" href="#">Contact</a></br>         
-    </div>  
-  </footer>
 </html>
