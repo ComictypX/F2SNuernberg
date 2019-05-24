@@ -2,20 +2,9 @@ var data = [];
 
 function process(obj) // Ajax return verarbeiten
 {
-    if (obj.search("Startzeit") != -1) // wenn config
-    {
-        data = JSON.parse(obj);
-        audio.volume = config.Signalton_vol / 100;
-    } else if (obj.search("Farbe") != -1) // wenn timetable
-    {
-        timetable = JSON.parse(obj);
-
-    } else { // wenn GPIO
-
-        gpio = obj;
-    }
-
-
+    console.log(obj);
+    data = JSON.parse(obj);
+    console.log(data);
 }
 
 function statechange() {
@@ -55,8 +44,7 @@ function refresh() {
     console.log("Updating");
     //Map update
     
-    pollServer("./scripts/readini.php");
-    pollServer("./scripts/readcsv.php");
+    pollServer("includes/scripts/getJason.php");
     updateMap(45.00, 0, 1500);
     jetzt = new Date();
     return;
