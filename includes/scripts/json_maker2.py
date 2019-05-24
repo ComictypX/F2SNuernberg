@@ -4,7 +4,7 @@ import os
 
 def passer(time, number):
     batch = []
-    datagroup = ["gps_query", "accgyr_query", "vehicle_query", "battery_query"]
+    datagroup = ["gps_query"]#, "accgyr_query", "vehicle_query", "battery_query"
     for file in datagroup:
         with open('includes/scripts/'+file+".json", "r+") as jsonFile:
             data = json.load(jsonFile)
