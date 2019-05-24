@@ -1,15 +1,16 @@
 import json
+import sys
 import os
 
-def passer(time, number):
+def main():
     batch = []
     datagroup = ["gps_query", "accgyr_query", "vehicle_query", "battery_query"]
     for file in datagroup:
         with open(file+".json", "r+") as jsonFile:
             data = json.load(jsonFile)
 
-        data["where"]["TS"][">="]=int(time)#1558536000000000
-        data["max-items"] = number
+        data["where"]["TS"][">="]=int(sys.argv[1])#1558536000000000
+        data["max-items"] = sys.argv[2]
         with open(file+".json", "w") as jsonFile:
             json.dump(data, jsonFile)
 
@@ -26,3 +27,4 @@ def passer(time, number):
     with open("passer.json", "r+") as jsonFile4:
             data3 = json.load(jsonFile4)
     print(data3)
+    
