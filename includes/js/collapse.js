@@ -13,11 +13,11 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
 
-    console.log("coll localName = , i ", i);
-    if (i == 1) {
+    console.log("coll localName = , i ", this.id);
+    if (this.id == "highscores_collapsible") {
       changeHighscoreTab(event, 'Overall score');
     }
-    else if (i == 2) {
+    else if (this.id == "eco_history_collapsible") {
       changeChartTab(event, 'MonthChart');
     };
   });
