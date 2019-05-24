@@ -1,0 +1,1 @@
+{"db": "tires", "schema": "hackaton", "table": "accgyr", "where": {"TS": {">=": 1558536000000000}}}
