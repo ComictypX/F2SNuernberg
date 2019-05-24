@@ -1,3 +1,6 @@
+import json
+import os
+
 def passer(time, number):
     batch = []
     datagroup = ["gps_query", "accgyr_query", "vehicle_query", "battery_query"]
