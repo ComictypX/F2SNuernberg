@@ -21,11 +21,5 @@ def passer(time, number):
             data2 = json.load(jsonFile2)
 
         batch.append(data2)
-    with open("includes/scripts/passer.json", "w") as jsonFile3:
-            json.dump(batch, jsonFile3)
-
-    with open("includes/scripts/passer.json", "r+") as jsonFile4:
-        print (jsonFile4.read())
-   
-   
-passer(sys.argv[1], sys.argv[2])
+    return batch
+print (jon.dumps(passer(sys.argv[1], sys.argv[2])))
