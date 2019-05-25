@@ -21,5 +21,5 @@ def passer(time, number):
             data2 = json.load(jsonFile2)
 
         batch.append(data2)
-    return str(batch[0]['result']['data'])
+    return batch
 print (json.dumps(passer(sys.argv[1], sys.argv[2])))
