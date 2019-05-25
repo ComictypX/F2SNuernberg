@@ -22,4 +22,4 @@ def passer(time, number):
 
         batch.append(data2)
     return batch
-print (jon.dumps(passer(sys.argv[1], sys.argv[2])))
+print (json.dumps(passer(sys.argv[1], sys.argv[2])))
