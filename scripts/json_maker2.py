@@ -29,7 +29,7 @@ def passer(time, number):
         data = base64.urlsafe_b64encode(test)
         #os.system('cat /var/www/html/scripts/{}.json | base64 -w 0'.format(file) > 
         #cmd2 = urlencode(cmd2)
-        #print(data)
+        print(data)
         cmd = 'curl -X GET -s -k -H "Content-Type: application/json" --key /var/www/html/scripts/RESTTEST_key.pem --cert /var/www/html/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q='+data.decode()
         os.system(cmd+ '> /var/www/html/scripts/{}_Data.json'.format(file))
         
