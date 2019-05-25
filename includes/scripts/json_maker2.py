@@ -22,7 +22,7 @@ def passer(time, number):
         data["max-items"] = int(number)
         with open('/var/www/html/includes/scripts/'+file+".json", "w") as jsonFile:
             json.dump(data, jsonFile, sort_keys=True)
-        test = json.dumps(data)
+        test = json.dumps(data).encode()
         print(test)
         bencoded = base64.b64encode(test)
         print(bencoded)
