@@ -75,7 +75,7 @@
     "# check consecutive zeros        \n",
     "element=[]\n",
     "for index, value in enumerate(ze):\n",
-    "    if vel[index]-vel[index-1]==1:\n",
+    "    if ze[index]-ze[index-1]==1:\n",
     "        element.append(value-1) \n",
     "        # here value is index of elements with zero velocity"
    ]
