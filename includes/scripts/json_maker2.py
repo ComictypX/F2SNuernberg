@@ -14,7 +14,7 @@ def passer(time, number):
         with open('includes/scripts/'+file+".json", "w") as jsonFile:
             json.dump(data, jsonFile, sort_keys=True)
 
-        cmd = 'sudo curl -X GET -s -k -H "Content-Type: application/json" --key RESTTEST_key.pem --cert RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q=$(cat includes/scripts/{}.json | base64 -w 0)'.format(file)
+        cmd = 'sudo curl -X GET -s -k -H "Content-Type: application/json" --key includes/scripts/RESTTEST_key.pem --cert includes/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q=$(cat includes/scripts/{}.json | base64 -w 0)'.format(file)
         print (cmd)
         os.system(cmd+ '> includes/scripts/{}_Data.json'.format(file))
         
@@ -30,6 +30,4 @@ def passer(time, number):
     print(data3)
    
    
-print sys.argv[1]
-print sys.argv[2]
 passer(sys.argv[1], sys.argv[2])
