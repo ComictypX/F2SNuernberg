@@ -1225,6 +1225,7 @@ h1, h2, h3, h4, h5,
 }
 
 progress[value]::-webkit-progress-value {
+  display:none;
   background-image:
 	   -webkit-linear-gradient(-45deg, 
 	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
@@ -1237,4 +1238,9 @@ progress[value]::-webkit-progress-value {
     border-radius: 2px; 
     background-size: 35px 20px, 100% 100%, 100% 100%;
    
+}
+
+#img_scooter{
+  float: left;
+  display: none;
 }

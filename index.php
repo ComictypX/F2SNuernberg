@@ -145,8 +145,6 @@
 
     </div>
     <div id="progress">
-
-        <progress  max="100" value="80"></progress>
     </div>
     <div class="container section-counter" id="work-section" >
         
@@ -211,8 +209,10 @@
         <div class="row">
           <div class="col-lg-6 mb-5">
             <h2 class="section-title">General Information</h2>
+            
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
           </div>
+          
         </div>
 
       </div>
@@ -332,35 +332,57 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="process bg-white rounded">
-              <div>
-                <span class="flaticon-glasses display-4 text-primary mb-4 d-inline-block"></span>
-                <h3>Data Gathering</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
-              </div>
+        <div class="col-12">
+          <p>&nbsp;</p>
+          <table class="distance table">
+          <thead class="thead-dark">
+          <tr>
+          <th>Pos.</th>
+          <th>First Name</th>
+          <th>Second Name</th>
+          <th>Distence</th>
+          <th>Hour</th>
+          <th>Efficient </th>
+          </tr>
+        </thead>
+          <tbody>
+          <tr>
+          <td>1.</td>
+          <td>Alex</td>
+          <td>xyz</td>
+          <td>75 Km</td>
+          <td>2,5h</td>
+          <td>85%</td>
+          </tr>
+          <tr>
+          <td>2.</td>
+          <td>Lukas</td>
+          <td>yxz</td>
+          <td>70 Km</td>
+          <td>1.5h</td>
+          <td>80%</td>
+          </tr>
+          <tr>
+          <td>3</td>
+          <td>Brijesh</td>
+          <td>za</td>
+          <td>65 km&nbsp;</td>
+          <td>1,2</td>
+          <td>75%</td>
+          </tr>
+          <tr>
+          <td>4</td>
+          <td>Oli</td>
+          <td>asd</td>
+          <td>52</td>
+          <td>0,5</td>
+          <td>45%</td>
+          </tr>
+          </tbody>
+          </table>
 
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="process bg-white rounded">
-              <div>
-                <span class="flaticon-vector display-4 text-primary mb-4 d-inline-block"></span>
-                <h3>Implementation</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
-              </div>
 
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="process bg-white rounded">
-              <div>
-                <span class="flaticon-monitor display-4 text-primary mb-4 d-inline-block"></span>
-                <h3>Launch</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
-              </div>
-
-            </div>
+      </div>
           </div>
         </div>
       </div>
