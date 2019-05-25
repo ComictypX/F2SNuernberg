@@ -30,7 +30,7 @@ def passer(time, number):
         #os.system('cat /var/www/html/includes/scripts/{}.json | base64 -w 0'.format(file) > 
         #cmd2 = urlencode(cmd2)
         print(data)
-        cmd = 'curl -X GET -s -k -H "Content-Type: application/json" --key /var/www/html/includes/scripts/RESTTEST_key.pem --cert /var/www/html/includes/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q='+str(data)
+        cmd = 'curl -X GET -s -k -H "Content-Type: application/json" --key /var/www/html/includes/scripts/RESTTEST_key.pem --cert /var/www/html/includes/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q='+data.decode()
         os.system(cmd+ '> /var/www/html/includes/scripts/{}_Data.json'.format(file))
         
         with open("/var/www/html/includes/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
