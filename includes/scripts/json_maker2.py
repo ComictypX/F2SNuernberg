@@ -9,8 +9,8 @@ server_cert = "/var/www/html/includes/scripts/RESTTEST_cert.pem"
 
 import urllib.parse
 
-def urlencode(str):
-return urllib.parse.quote(str)
+#def urlencode(str):
+#return urllib.parse.quote(str)
 
 def passer(time, number):
     batch = []
