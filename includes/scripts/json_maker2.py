@@ -2,7 +2,6 @@ import json
 import sys
 import os
 import subprocess
-import request
 
 server_key = "/var/www/html/includes/scripts/RESTTEST_key.pem"
 server_cert = "/var/www/html/includes/scripts/RESTTEST_cert.pem"
