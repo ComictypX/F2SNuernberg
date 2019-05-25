@@ -19,7 +19,7 @@ def passer(time, number):
         with open('/var/www/html/scripts/'+file+".json", "r+") as jsonFile:
             data = json.load(jsonFile)
         data["where"]["TS"][">="]=int(time)#1558536000000000
-        data["max-items"] = int(number)
+        data["max-items"] = 50
         with open('/var/www/html/scripts/'+file+".json", "w") as jsonFile:
             json.dump(data, jsonFile, sort_keys=True)
         test = json.dumps(data).encode()
