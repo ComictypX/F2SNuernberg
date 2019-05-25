@@ -37,7 +37,7 @@ def passer(time, number):
             data2 = json.load(jsonFile2)
         return data2
         batch.append(data2)
-    return data2.replace("'", "\"")
+    return data2.replace("'", "\"").replace("None", "\"None\"")
     
 # print (json.dumps(passer(sys.argv[1], sys.argv[2]), ensure_ascii = 'False'))
 print (passer(sys.argv[1], sys.argv[2]))
