@@ -44,7 +44,7 @@ function refresh() {
     console.log("Updating");
     //Map update
     
-    pollServer("includes/scripts/getJason.php");
+    pollServer("includes/scripts/getJson.php");
     updateMap(45.00, 0, 1500);
     jetzt = new Date();
     return;

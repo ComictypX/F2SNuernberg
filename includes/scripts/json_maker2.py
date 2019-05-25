@@ -24,4 +24,4 @@ def passer(time, number):
         batch.append(data2)
     return batch
     
-print (json.dump(passer(sys.argv[1], sys.argv[2])))
+print (json.dumps(passer(sys.argv[1], sys.argv[2]), , ensure_ascii = 'False'))
