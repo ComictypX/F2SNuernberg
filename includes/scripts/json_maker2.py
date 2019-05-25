@@ -24,9 +24,9 @@ def passer(time, number):
             json.dump(data, jsonFile, sort_keys=True)
         test = json.dumps(data).encode()
         #print(test)
-        bencoded = base64.b64encode(test)
+        #bencoded = base64.b64encode(test)
         #print(bencoded)
-        data = base64.urlsafe_b64encode(bencoded)
+        data = base64.urlsafe_b64encode(test)
         #os.system('cat /var/www/html/includes/scripts/{}.json | base64 -w 0'.format(file) > 
         #cmd2 = urlencode(cmd2)
         #print(data)
