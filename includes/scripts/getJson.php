@@ -5,5 +5,5 @@ $command = "python3 includes/scripts/json_maker2.py" . " " . $timeString . " " .
 #echo $command;
 exec($command, $output);
 #echo "Exit Code: " . $ret_code;
-echo $output;
+echo "'" . $output . "'";
 ?>
