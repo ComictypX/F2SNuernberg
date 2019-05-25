@@ -15,7 +15,7 @@ def passer(time, number):
         with open('/var/www/html/includes/scripts/'+file+".json", "w") as jsonFile:
             json.dump(data, jsonFile, sort_keys=True)
 
-        cmd = 'sudo curl -X GET -s -k -H "Content-Type: application/json" --key /var/www/html/includes/scripts/RESTTEST_key.pem --cert /var/www/html/includes/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q=$(cat /var/www/html/includes/scripts/{}.json | base64 -w 0)'.format(file)
+        cmd = 'curl -X GET -s -k -H "Content-Type: application/json" --key /var/www/html/includes/scripts/RESTTEST_key.pem --cert /var/www/html/includes/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q=$(cat /var/www/html/includes/scripts/{}.json | base64 -w 0)'.format(file)
         os.system(cmd+ '> /var/www/html/includes/scripts/{}_Data.json'.format(file))
         
         with open("/var/www/html/includes/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
