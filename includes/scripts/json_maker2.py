@@ -23,14 +23,14 @@ def passer(time, number):
         with open('/var/www/html/includes/scripts/'+file+".json", "w") as jsonFile:
             json.dump(data, jsonFile, sort_keys=True)
         test = json.dumps(data).encode()
-        print(test)
+        #print(test)
         bencoded = base64.b64encode(test)
-        print(bencoded)
+        #print(bencoded)
         data = base64.urlsafe_b64encode(bencoded)
         #os.system('cat /var/www/html/includes/scripts/{}.json | base64 -w 0'.format(file) > 
         #cmd2 = urlencode(cmd2)
-        print(data)
-        cmd = 'curl -X GET -s -k -H "Content-Type: application/json" --key /var/www/html/includes/scripts/RESTTEST_key.pem --cert /var/www/html/includes/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q='+data
+        #print(data)
+        cmd = 'curl -X GET -s -k -H "Content-Type: application/json" --key /var/www/html/includes/scripts/RESTTEST_key.pem --cert /var/www/html/includes/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q='+str(data)
         # os.system(cmd+ '> /var/www/html/includes/scripts/{}_Data.json'.format(file))
         
         with open("/var/www/html/includes/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
