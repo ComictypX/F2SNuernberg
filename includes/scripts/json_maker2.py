@@ -31,7 +31,7 @@ def passer(time, number):
         #cmd2 = urlencode(cmd2)
         #print(data)
         cmd = 'curl -X GET -s -k -H "Content-Type: application/json" --key /var/www/html/includes/scripts/RESTTEST_key.pem --cert /var/www/html/includes/scripts/RESTTEST_cert.pem https://ctpwyd.conti.de:443/data?q='+str(data)
-        # os.system(cmd+ '> /var/www/html/includes/scripts/{}_Data.json'.format(file))
+        os.system(cmd+ '> /var/www/html/includes/scripts/{}_Data.json'.format(file))
         
         with open("/var/www/html/includes/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
             data2 = json.load(jsonFile2)
