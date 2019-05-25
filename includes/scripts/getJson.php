@@ -6,5 +6,5 @@ $command = "python3 includes/scripts/json_maker2.py" . " " . $timeString . " " .
 exec($command, $output);
 
 #echo $output;
-echo implode("|",$output);
+echo json_encode($output, JSON_PRETTY_PRINT);
 ?>
