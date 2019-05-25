@@ -35,6 +35,9 @@ def passer(time, number):
         
         with open("/var/www/html/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
             data2 = json.load(jsonFile2)
+            data2['result']=file
+         with open("/var/www/html/scripts/{}_Data.json".format(file), "w") as jsonFile2:
+            json.dump(data2, jsonFile2)
 
         batch.append(data2)
     return batch
