@@ -1,7 +1,7 @@
 <?php
 $timestamp = time();
 $timeString = $timestamp . "000000";
-$command = "python3 /var/www/html/scripts/json_maker2.py" . " " . $timeString . " " . "1 2>&1";
+$command = "python3 /var/www/html/scripts/json_maker3.py" . " " . $timeString . " " . "1 2>&1";
 #$command = "php includes/scripts/test.php 2>&1";
 
 #echo $command;
