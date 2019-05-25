@@ -1,10 +1,11 @@
 import json
 import sys
 import os
+import subprocess
 
 def passer(time, number):
     batch = []
-    datagroup = ["gps_query"]#, "accgyr_query", "vehicle_query", "battery_query"
+    datagroup = ["gps_query, accgyr_query", "vehicle_query", "battery_query"]#
     for file in datagroup:
         with open('includes/scripts/'+file+".json", "r+") as jsonFile:
             data = json.load(jsonFile)
@@ -22,4 +23,5 @@ def passer(time, number):
 
         batch.append(data2)
     return batch
-print (json.dumps(passer(sys.argv[1], sys.argv[2])))
+    
+print (json.dump(passer(sys.argv[1], sys.argv[2])))
