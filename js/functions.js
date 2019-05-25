@@ -44,14 +44,13 @@ function refresh() {
     console.log("Updating");
     //Map update
     
-    pollServer("includes/scripts/getJson.php");
+    pollServer("scripts/getJson.php");
     updateMap(49.4773575,11.1156473, 1500);
     
     jetzt = new Date();
     return;
 }
 function run() { // Grundlogik
-    console.log("Ouch");
 	// Daten holen
     refresh();
     return;
