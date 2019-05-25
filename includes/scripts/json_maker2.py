@@ -25,8 +25,7 @@ def passer(time, number):
             json.dump(batch, jsonFile3)
 
     with open("includes/scripts/passer.json", "r+") as jsonFile4:
-            data3 = json.dumps(jsonFile4)
-    print(str(data3))
+        print (jsonFile4.read())
    
    
 passer(sys.argv[1], sys.argv[2])
