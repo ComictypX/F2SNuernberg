@@ -5,7 +5,6 @@ $command = "python3 includes/scripts/json_maker2.py" . " " . $timeString . " " .
 #echo $command;
 exec($command, $output);
 
-echo '{"row":' . $filename2 . '}';
-echo $output;
+echo strlen($output);
 #echo json_encode($output, JSON_PRETTY_PRINT);
 ?>
