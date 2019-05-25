@@ -76,7 +76,7 @@
                 <li><a href="#home-section" class="nav-link">Home</a></li>
                 <li><a href="#nav-section" class="nav-link">Navigation</a></li>
                 <li><a href="#work-section" class="nav-link">General Information</a></li>
-                <li><a href="#process-section" class="nav-link">Eco Monitor</a></li>
+                <li><a href="#process-section" class="nav-link">Eco Game!</a></li>
                 <li><a href="#testimonials-section" class="nav-link">Safety</a></li>
                 
               </ul>
@@ -327,7 +327,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 mb-5">
-            <h2 class="section-title">ECO Monitor</h2>
+            <h2 class="section-title">ECO Game!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
           </div>
         </div>
@@ -342,7 +342,7 @@
           <th>Second Name</th>
           <th>Distence</th>
           <th>Hour</th>
-          <th>Efficient </th>
+          <th>Efficiency </th>
           </tr>
         </thead>
           <tbody>
@@ -374,7 +374,7 @@
           <td>4</td>
           <td>Oli</td>
           <td>asd</td>
-          <td>52</td>
+          <td>52 km</td>
           <td>0,5</td>
           <td>45%</td>
           </tr>
