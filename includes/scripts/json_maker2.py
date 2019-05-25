@@ -23,7 +23,7 @@ def passer(time, number):
         with open('/var/www/html/includes/scripts/'+file+".json", "w") as jsonFile:
             json.dump(data, jsonFile, sort_keys=True)
         test = json.dumps(data)
-        print test
+        print(test)
         data = base64.urlsafe_b64encode(test)
         #os.system('cat /var/www/html/includes/scripts/{}.json | base64 -w 0'.format(file) > 
         #cmd2 = urlencode(cmd2)
