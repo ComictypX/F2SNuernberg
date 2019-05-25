@@ -40,4 +40,4 @@ def passer(time, number):
     return batch
     
 # print (json.dumps(passer(sys.argv[1], sys.argv[2]), ensure_ascii = 'False'))
- print (passer(sys.argv[1], sys.argv[2]), ensure_ascii = 'False')
+print (passer(sys.argv[1], sys.argv[2]), ensure_ascii = 'False')
