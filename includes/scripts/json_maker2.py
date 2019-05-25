@@ -10,7 +10,7 @@ def passer(time, number):
             data = json.load(jsonFile)
 
         data["where"]["TS"][">="]=int(time)#1558536000000000
-        data["max-items"] = number
+        data["max-items"] = int(number)
         with open('includes/scripts/'+file+".json", "w") as jsonFile:
             json.dump(data, jsonFile, sort_keys=True)
 
