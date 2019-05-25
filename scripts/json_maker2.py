@@ -35,7 +35,8 @@ def passer(time, number):
         
         with open("/var/www/html/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
             data2 = json.load(jsonFile2)
-            data2['result']=file
+            data2[0]['result']=data2[0][file]
+            del data2[0]['result']
          with open("/var/www/html/scripts/{}_Data.json".format(file), "w") as jsonFile2:
             json.dump(data2, jsonFile2)
 
