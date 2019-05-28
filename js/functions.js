@@ -2,9 +2,9 @@ var data = [];
 
 function process(obj) // Ajax return verarbeiten
 {
-    console.log(obj);
+    //console.log(obj);
     data = JSON.parse(obj);
-    console.log(data);
+    //console.log(data);
 }
 
 function statechange() {
