@@ -35,7 +35,7 @@ def passer(time, number):
         
         with open("/var/www/html/scripts/{}_Data.json".format(file), "r+") as jsonFile2:
             data2 = json.load(jsonFile2)
-        return data2
+        return data2.replace("'", "\"").replace("None", "\"None\"")
         batch.append(data2)
     return data2.replace("'", "\"").replace("None", "\"None\"")
     
